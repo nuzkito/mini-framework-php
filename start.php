@@ -2,8 +2,9 @@
 
 define('PATH', dirname(__FILE__) . '/');
 
+// Configuración
+require PATH . 'app/config.php';
 // Carga de todos los archivos necesarios.
-require PATH . 'core/Config.php';
 require PATH . 'core/Helpers.php';
 require PATH . 'core/Database.php';
 require PATH . 'core/Router.php';
@@ -23,12 +24,12 @@ if (isset($config['db']) && $config['db'] &&
 	unset($config['db']); // Se eliminan los datos de la base de datos, por si acaso.
 }
 
-View::set_dir(PATH . 'views/'); // Define el directorio en el que se encuentran las vistas.
+View::set_dir(PATH . 'app/views/'); // Define el directorio en el que se encuentran las vistas.
 session_start(); // Inicia las sesiones
 
 $router = new Router($_SERVER['REQUEST_URI']);
 
-require PATH . 'routes.php';
+require PATH . 'app/routes.php';
 
 $router->run();
 

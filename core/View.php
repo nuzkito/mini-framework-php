@@ -8,10 +8,10 @@
  * Las variables, estructuras de control, etc. se usan con PHP normal,
  * incluyendo las etiquetas de apertura o cierre de PHP.
  */
-class View {
+class View extends Response {
 
     static $dir = 'views/';
-    static $ext = '.php';
+    static $ext = '.tpl.php';
     static $locals = [];
 
     private $view;
@@ -108,11 +108,11 @@ class View {
     }
 
     /**
-     * Imprime la vista y finaliza la ejecución del programa.
+     * Imprime la vista.
      */
-    public function draw()
+    public function execute()
     {
-        die($this->get());
+        echo $this->get();
     }
 
     /**

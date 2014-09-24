@@ -11,6 +11,7 @@ require PATH . 'core/Router.php';
 require PATH . 'core/Route.php';
 require PATH . 'core/Model.php';
 require PATH . 'core/Controller.php';
+require PATH . 'core/Response.php';
 require PATH . 'core/View.php';
 require PATH . 'core/Auth.php';
 

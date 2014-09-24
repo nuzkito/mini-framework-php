@@ -2,5 +2,5 @@
 
 $router->add('/', function ()
 {
-	return 'home';
+	return View::make('home');
 });

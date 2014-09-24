@@ -1,6 +1,6 @@
 <?php
 
-class DB {
+class Database {
     static $db;
 
     static function init($config){

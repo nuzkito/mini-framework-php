@@ -3,16 +3,18 @@
 define('PATH', dirname(__FILE__) . '/');
 
 // Carga de todos los archivos necesarios.
-require PATH . 'core/config.php';
-require PATH . 'core/helpers.php';
-require PATH . 'core/db.php';
-require PATH . 'core/model.php';
-require PATH . 'core/controller.php';
-require PATH . 'core/view.php';
-require PATH . 'core/auth.php';
+require PATH . 'core/Config.php';
+require PATH . 'core/Helpers.php';
+require PATH . 'core/Database.php';
+require PATH . 'core/Router.php';
+require PATH . 'core/Route.php';
+require PATH . 'core/Model.php';
+require PATH . 'core/Controller.php';
+require PATH . 'core/View.php';
+require PATH . 'core/Auth.php';
 
 
-DB::init($config);// Inicia una conexión con la base de datos.
+Database::init($config);// Inicia una conexión con la base de datos.
 unset($config['db']); // Se eliminan los datos de la base de datos, por si acaso.
 View::set_dir(PATH . 'views/'); // Define el directorio en el que se encuentran las vistas.
 session_start(); // Inicia las sesiones

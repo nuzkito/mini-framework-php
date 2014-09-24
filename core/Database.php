@@ -4,9 +4,9 @@ class Database {
     static $db;
 
     static function init($config){
-        self::$db = new PDO('mysql:host='.$config['db']['host'].';port='.$config['db']['port'].';dbname='.$config['db']['name'],
-                            $config['db']['user'],
-                            $config['db']['pass'],
+        self::$db = new PDO('mysql:host='.$config['host'].';port='.$config['port'].';dbname='.$config['name'],
+                            $config['user'],
+                            $config['pass'],
                             array(
                                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC)
                             );

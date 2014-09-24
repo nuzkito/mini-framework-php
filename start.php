@@ -26,7 +26,14 @@ if (isset($config['db']) && $config['db'] &&
 View::set_dir(PATH . 'views/'); // Define el directorio en el que se encuentran las vistas.
 session_start(); // Inicia las sesiones
 
+$router = new Router($_SERVER['REQUEST_URI']);
 
+require PATH . 'routes.php';
+
+$router->run();
+
+
+/*
 // Se obtiene el parámetro get de la url para cargar la página. Si no existe,
 // se pone por defecto la página 'home'.
 $page = (isset($_GET['page']) && $_GET['page'] != '') ? strtolower($_GET['page']) : 'home';
@@ -50,3 +57,4 @@ if (is_file($controller_file)) {
 }
 
 error_404();
+*/

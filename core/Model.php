@@ -1,4 +1,4 @@
-<?php
+<?php namespace Core;
 
 /**
  * Modelo base del cual extenderán los demás modelos.
@@ -32,7 +32,7 @@ class Model {
     /**
      * Comprueba si el modelo es válido. Este método se sobreescribe en todos
      * los modelos y se añade la validación manualmente.
-     * 
+     *
      * @return boolean true si la validación es incorrecta. false en caso contrario.
      */
     public function is_valid()
@@ -61,7 +61,7 @@ class Model {
 
     /**
      * Obtiene modelos según la información enviada.
-     * 
+     *
      * @param array $where Los atributos de la condición where. El array debe ser de clave - valor.
      * @param int $take_from Desde qué fila va a devolver. Si no se da este valor, se devuelven todos.
      * @param int $take Cuántas va a recoger. Si no se da este valor, $take_from se toma como $take.
@@ -150,7 +150,7 @@ class Model {
 
     /**
      * Crea un nuevo modelo con los datos pasados y lo almacena en la base de datos.
-     * 
+     *
      * @param array $data Datos a pasar al constructor del modelo.
      * @return mixed El modelo creado, o false si ha ocurrido algún error al validar.
      */

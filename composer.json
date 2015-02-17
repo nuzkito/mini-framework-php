@@ -1,0 +1,16 @@
+{
+    "name": "root/mini-framework-php",
+    "description": "Mini framework de PHP",
+    "authors": [
+        {
+            "name": "Iván Abascal Lozano",
+            "email": "abalozz@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Core\\": "core/"
+      }
+    }
+}

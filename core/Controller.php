@@ -1,4 +1,4 @@
-<?php
+<?php namespace Core;
 
 /**
  * Controlador base del cual extenderán los demás controladores. El controlador,
@@ -13,7 +13,7 @@ class Controller {
      * El constructor recibe el action, que contiene el nombre del método que va a ejecutar.
      * Si el método no existe, muestra un error 404. Si existe, envía al cliente la vista
      * y finaliza la ejecución del programa.
-     * 
+     *
      * @param String $action Nombre del método a ejecutar.
      */
     public function __construct($action = null)

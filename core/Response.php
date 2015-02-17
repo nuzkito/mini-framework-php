@@ -1,4 +1,4 @@
-<?php
+<?php namespace Core;
 
 abstract class Response {
 

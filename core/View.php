@@ -1,10 +1,10 @@
-<?php
+<?php namespace Core;
 
 /**
  * Maneja las vistas y devuelve el HTML con los datos insertados.
  * Las plantillas pueden extenderse de forma similar a las clases,
  * agregando una etiqueta que lo indique en el archivo de la plantilla.
- * 
+ *
  * Las variables, estructuras de control, etc. se usan con PHP normal,
  * incluyendo las etiquetas de apertura o cierre de PHP.
  */
@@ -19,7 +19,7 @@ class View extends Response {
 
     /**
      * Constructor de la clase. Recibe y guarda el nombre de la plantilla HTML a utilizar.
-     * 
+     *
      * @param String $view Nombre de la pantilla HTML.
      */
     public function __construct($view)
@@ -30,10 +30,10 @@ class View extends Response {
 
     /**
      * Extiende la vista
-     * 
+     *
      * Recibe el HTML de la plantilla, comprueba si la plantilla extiende de
      * otra y, en ese caso, une las plantillas y devuelve el HTML correspondiente.
-     * 
+     *
      * @param String $html HTML de la vista seleccionada.
      * @return String HTML completo, con el HTML de la vista de la que extiende(si extiende).
      */
@@ -60,9 +60,9 @@ class View extends Response {
 
     /**
      * Inserta variables en la vista.
-     * 
+     *
      * Permite agregar una variable o un array de variables a la vista.
-     * 
+     *
      * @param mixed $key Puede recibir un array con uno o varios elementos, o
      * el nombre de la variable de uno.
      * @param mixed $value Si $key no es un array, el valor correspondiente a
@@ -81,7 +81,7 @@ class View extends Response {
 
     /**
      * Devuelve el HTML procesado.
-     * 
+     *
      * @return String El HTML procesado
      */
     public function get()
@@ -121,7 +121,7 @@ class View extends Response {
 
     /**
      * Crea un nuevo objeto de tipo View (identico a usar new View();).
-     * 
+     *
      * @param String $view Nombre de la pantilla HTML.
      * @return View Nueva vista.
      */
@@ -132,7 +132,7 @@ class View extends Response {
 
     /**
      * Agrega variables locales que se podrán usar en todas las vistas.
-     * 
+     *
      * @param mixed $key Puede recibir un array con uno o varios elementos, o
      * el nombre de la variable de uno.
      * @param mixed $value Si $key no es un array, el valor correspondiente a
@@ -151,7 +151,7 @@ class View extends Response {
 
     /**
      * Establece el directorio en el que se encuentran las plantillas.
-     * 
+     *
      * @param String $dir Ruta del directorio.
      */
     static function set_dir($dir)
@@ -161,7 +161,7 @@ class View extends Response {
 
     /**
      * Establece la extensión de las plantillas (por defecto .php).
-     * 
+     *
      * @param String $ext Extensión de las plantillas.
      */
     static function set_ext($ext)

@@ -1,10 +1,10 @@
-<?php
+<?php namespace Core;
 
 class Auth {
 
     /**
      * Comprueba si el cliente ha iniciado sesión.
-     * 
+     *
      * @return boolean true si ha iniciado sesión. false si no.
      */
     static function check()
@@ -18,7 +18,7 @@ class Auth {
 
     /**
      * Inicia sesión con los datos pasados por parámetro.
-     * 
+     *
      * @param String $identity Nombre de usuario o email.
      * @param String $password Contraseña sin encriptar.
      * @return boolean true si ha iniciado sesión. false si ha ocurrido algún error.
@@ -49,7 +49,7 @@ class Auth {
 
     /**
      * Crea un nuevo usuario
-     * 
+     *
      * @return mixed El modelo del usuario creado, o false si falló.
      */
     static function create($user_data)
@@ -62,7 +62,7 @@ class Auth {
 
     /**
      * Devuelve el usuario almacenado en la sesión. Si no existe, devuevle false.
-     * 
+     *
      * @return mixed El usuario almacenado en sesión o false si no existe.
      */
     static function user()

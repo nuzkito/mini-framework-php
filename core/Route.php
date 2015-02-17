@@ -1,4 +1,4 @@
-<?php
+<?php namespace Core;
 
 class Route {
 
@@ -59,4 +59,3 @@ class Route {
 	}
 
 }
-

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Core;
 
 class Database {
     static $db;
@@ -18,7 +18,7 @@ class Database {
         $reponse->execute($params);
 
         if ($fetch) {
-            return $reponse->fetchAll(); 
+            return $reponse->fetchAll();
         }
         return $reponse;
     }
